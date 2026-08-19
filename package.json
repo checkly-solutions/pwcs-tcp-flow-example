@@ -1,0 +1,23 @@
+{
+  "name": "pwcs-tcp-flow-example",
+  "private": true,
+  "description": "Monitoring a proprietary TCP protocol with a Checkly Playwright Check Suite: raw node:tls login handshake plus sequenced packet validation against a bundled mock gateway",
+  "scripts": {
+    "demo": "./demo.sh working",
+    "demo:break": "./demo.sh break",
+    "demo:break-auth": "./demo.sh break-auth",
+    "server": "node launcher/server/launcher-gateway.mjs",
+    "test:local": "playwright test --config launcher/playwright.config.ts",
+    "typecheck": "tsc --noEmit",
+    "test:cloud": "checkly test --record --verbose",
+    "deploy": "checkly deploy",
+    "destroy": "checkly destroy"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.58.2",
+    "@types/node": "^24.0.0",
+    "checkly": "^8.18.0",
+    "selfsigned": "^2.4.1",
+    "typescript": "^5.7.0"
+  }
+}

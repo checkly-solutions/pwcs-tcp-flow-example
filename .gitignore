@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Secrets — .env.example is the tracked template
+.env
+.env.*
+!.env.example
+
+# Playwright output (root and launcher/, which is where the config lives)
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+.last-run.json
+
+# Checkly CLI build/session artifacts
+.checkly/
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Generated certs / keys (selfsigned)
+*.pem
+*.key
+*.crt
+
+# Logs
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# Editor / OS cruft
+.DS_Store
+.idea/
+.vscode/
+*.swp
